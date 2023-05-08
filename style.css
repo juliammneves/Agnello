@@ -7,12 +7,18 @@
     font-family: 'Lato', sans-serif;
     scroll-behavior: smooth;
 }
+
+
+/*========== Variaveis ==========*/
 :root{
     --bg-color: #1E1E1E;
     --main-color: #f2a74b;
     --text-color: #f5f5f5;
+    --footer-color: #5a5a5aa6;
     --font-2:'Playfair Display', serif;
 }
+/*========== Variaveis ==========*/
+
 
 body{
     background-color: var(--bg-color);
@@ -52,12 +58,13 @@ li, a{
     text-decoration: none;
 }
 
+
 /*========== Menu de navegação ==========*/
 .navbar{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 3% 10% 3% 10%;
+    padding: 3% 10% 3% 10%;
     background-color: transparent;
 }
 .navbar h1{
@@ -107,6 +114,7 @@ li, a{
     text-align: center;
 }
 /*========== Menu de navegação ==========*/
+
 
 /*========== Inicio ==========*/
 .bg-img{
@@ -296,12 +304,6 @@ section i{
     width: 200%;
     transition: 1s;
 }
-#two:checked~.vinhos {
-    margin-left: -90%;
-}
-#three:checked~.vinhos {
-    margin-left: -165%;
-}
 .vinho{
     display: flex;
     padding: 20px;
@@ -311,7 +313,6 @@ section i{
     height: 26rem;
     cursor: pointer;
 }
-
 .vinhos img{
     height: 20rem;
     transition: all 0.3s;
@@ -324,7 +325,7 @@ section i{
     display: flex;
     height: 23.2rem;
     overflow: hidden;
-    transition: width .3s ease-in-out; /* 5 segundos de transição */
+    transition: width .3s ease-in-out;
 }
 .preco{
     display: flex;
@@ -336,24 +337,12 @@ section i{
     display: flex;
     transition: width .5s ease-in-out, opacity 1.5s ease-in-out;
 }
-  
-.vinho img:hover ~ .info {
-    width: 25rem; 
-    opacity: 1; 
-    display: flex;
-    transition: width .5s ease-in-out, opacity 1.5s ease-in-out;
-}
-
 .produtos .button {
     width: 100%;
     display: flex;
     justify-content: center;
     margin: 20px;
 }
-#tinto{
-    margin-top: 20px;
-}
-
 .produtos input{
     display: none;
 }
@@ -366,23 +355,29 @@ section i{
     cursor: pointer;
     transition: all 0.5s ease;
 }
-
 .button label.active {
     width: 35px;
 }
-
+/* box Tinto*/
+#tinto{
+    margin-top: 20px;
+}
+#two:checked~.vinhos {
+    margin-left: -90%;
+}
+#three:checked~.vinhos {
+    margin-left: -165%;
+}
 #one:checked ~ .button .one {
     width: 35px;
 }
-
 #two:checked ~ .button .one {
     width: 15px;
 }
-
 #two:checked ~ .button .two {
     width: 35px;
 }
-#three:checked ~ .button .two {
+#three:checked ~ .button .two{
     width: 15px;
 }
 #three:checked ~ .button .one {
@@ -391,8 +386,7 @@ section i{
 #three:checked ~ .button .three {
     width: 35px;
 }
-
-
+/* box Branco*/
 #branco{
     margin-top: 100px;
 }
@@ -401,27 +395,22 @@ section i{
     width: 200%;
     transition: 1s;
 }
-
 #two1:checked ~ .vinhos {
     margin-left: -90.5%;
 }
-
 #one1:checked ~ .button .one1 {
     width: 35px;
 }
-
 #two1:checked ~ .button .one1 {
     width: 15px;
 }
-
 #two1:checked ~ .button .two1 {
     width: 35px;
 }
-
-
-
-
-
+/* box Rosés */
+#rose{
+    margin-top: 100px;
+}
 
 
 /*========== Contato ==========*/
@@ -574,3 +563,113 @@ textarea.contact-input ~ .icon{
     color: var(--text-color);
 }
 /*========== Contato ==========*/
+
+
+/*========== Footer ==========*/
+footer{
+    height: 14rem;
+    padding: 2% 10% 2%;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+footer span{
+    color: var(--main-color);
+}
+footer p{
+    color: var(--footer-color);
+}
+footer i{
+    margin-top: 10px;
+    color: var(--footer-color);
+    font-size: 20px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+footer h2{
+    color: var(--text-color);
+    margin-bottom: 5px;
+}
+footer li{
+    list-style: none;
+}
+footer li a{
+    color: var(--footer-color);
+    font-size: 16px;
+}
+/*========== Footer ==========*/
+
+
+@media screen and (max-width: 1366px) and (max-height: 768px){
+    h1{
+        font-size: 40px;
+    }
+    /* === inicio === */
+    .box_index{
+        margin:  7% 20%;
+    }
+    /* === Categorias === */
+    .categorias img{
+        height: 13rem;
+    }
+    .box .tipos{
+        width: 20rem;
+    }
+    /* === Destaque === */
+    .col-5 h2{
+        font-size: 20px;
+    }
+    .col-5 img{
+        height: 12rem;
+    }
+    .rating, .tipo, .desconto{
+        font-size: 13px;
+    }
+    .box .col-5{
+        width: 12rem;
+    }
+    .box hr{
+        width: 10rem;
+    }
+    /* === Sobre === */
+    .box_sobre p{
+        font-size: 15px;
+    }
+    .box_sobre .text{
+        width: 40rem;
+    }
+    .box_sobre img{
+        height: 30rem;
+    }
+    /* === Produtos === */
+    .vinho{
+        height: 21rem;
+    }
+    .vinhos img{
+        height: 15rem;
+    }
+    .info{
+        height: 18.2rem;
+    }
+    .info h2{
+        font-size: 18px;
+    }
+    .info p{
+        font-size: 15px;
+    }
+    .comprar:hover ~ .info{
+        width: 23rem; 
+    }
+    .info i{
+        font-size: 13px;
+    }
+    .info h6{
+        font-size: 8px;
+    }
+    .info h3{
+        font-size: 13px;
+    }
+    .info p{
+        font-size: 12.5px;
+    }
+}
