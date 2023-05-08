@@ -1,0 +1,576 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&family=Playfair+Display:wght@500;600;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    scroll-behavior: smooth;
+}
+:root{
+    --bg-color: #1E1E1E;
+    --main-color: #f2a74b;
+    --text-color: #f5f5f5;
+    --font-2:'Playfair Display', serif;
+}
+
+body{
+    background-color: var(--bg-color);
+}
+section{
+    padding: 5% 10%;
+}
+h1{
+    font-family: var(--font-2);
+    color: var(--text-color);
+    font-size: 50px;
+}
+h2, h5, p{
+    color: var(--text-color);
+}
+h3{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--main-color);
+    font-size: 15px;
+    font-weight: 800;
+}
+h6{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--main-color);
+    font-size: 10px;
+    font-weight: 800;
+}
+h4{
+    color: #f5f5f582;
+    font-weight: 400;
+}
+li, a{
+    font-weight: 700;
+    font-size: 17px;
+    text-decoration: none;
+}
+
+/*========== Menu de navegação ==========*/
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 3% 10% 3% 10%;
+    background-color: transparent;
+}
+.navbar h1{
+    font-size: 25px;
+    color: var(--text-color);
+    font-family: var(--font-2);
+    cursor: pointer;
+}
+.navbar li{
+    list-style: none;
+    display: inline-block;
+    padding-left: 50px;
+}
+.navbar li a{
+    color: var(--text-color);
+    transition: 0.2s ease-in-out;
+}
+.navbar li a:hover{
+    color: var(--main-color);
+}
+/* LINHA EMBAIXO DOS LINKS */
+.navbar li a::after{
+    content: "";
+    background-color: var(--main-color);
+    height: 3px;
+    width: 0;
+    /* margin: auto; */
+    display: block;
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
+}
+.navbar li a:hover::after{
+    width: 100%;
+    transition: width 0.3s linear;
+}
+/* LINHA EMBAIXO DOS LINKS */
+.navbar i{
+    color: var(--text-color);
+    padding-left: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.navbar i:hover{
+    color: var(--main-color);
+}
+.icons{
+    text-align: center;
+}
+/*========== Menu de navegação ==========*/
+
+/*========== Inicio ==========*/
+.bg-img{
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    filter: brightness(0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.box_index{
+    margin:  12% 20%;
+}
+.box_index span{
+    font-size: 60px;
+    font-weight: 600;
+    color: var(--text-color);
+    font-style: italic;
+    font-family: var(--font-2);
+}
+.box_index h1{
+    color: var(--text-color);
+    font-size: 50px;
+    font-weight: 500;
+    font-family: 'Lato', sans-serif;
+}
+.box_index i{
+    font-size: 60px;
+    margin-top: 30px;
+    color: var(--text-color);
+    padding: 20px 23px;
+    border: solid 5px var(--text-color);
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+}
+.box_index i:hover{
+    color: var(--main-color);
+    border: solid 5px var(--main-color);
+    
+}
+/*========== Inicio ==========*/
+
+
+/*========== Categorias ==========*/
+.categorias{
+    text-align: center;
+}
+.categorias img{
+    height: 15rem;
+}
+.categorias .box{
+    display: flex;
+    margin-top: 30px;
+    justify-content: space-between;
+}
+.categorias .box h2{
+    padding: 10px;
+    letter-spacing: 2px;
+}
+.box .tipos{
+    width: 22rem;
+    padding: 35px;
+    box-shadow:  22px 22px 43px #1a1a1a,
+                -22px -22px 43px #232323;
+    border-radius: 25px;
+    transition: all 0.3s;
+}
+.box .tipos:hover{
+    box-shadow: inset 22px 22px 43px #1a1a1a,
+                inset -22px -22px 43px #232323;
+}
+/*========== Categorias ==========*/
+
+
+/*========== Destaque ==========*/
+.ofertas h1, .ofertas h3{
+    text-align: center;
+}
+.ofertas .box{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+.box .col-5{
+    width: 15rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border-radius: 25px;
+    border: 5px solid #49494977;
+    transition: all .5s;
+}
+.box .comprar h3{
+    margin: 10px 0;
+    padding: 8px 15px;
+    border-radius: 25px;
+    border: 3px solid var(--main-color);
+    transition: all .5s;
+}
+.box .comprar h3:hover{
+    margin: 10px 0;
+    padding: 8px 15px;
+    border-radius: 25px;
+    background-color: var(--main-color);
+    color: var(--text-color);
+}
+.box .col-5 span{
+    color: transparent;
+}
+.box .col-5 h2{
+    text-align: center;
+    margin-bottom: 15px;
+}
+.box hr{
+    width: 12rem;
+    margin: 10px 0 5px;
+}
+.rating, .tipo, .desconto, .text h3, .origem,.info h3, .combina, .teor{
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+.desconto p{
+    text-decoration: line-through;
+}
+.desconto h5{
+    padding: 5px;
+    margin-left: 5px;
+    background-color: #f2a74b;
+    border-radius: 5px;
+}
+section i{
+    margin-right: 5px;
+}
+.box .col-5:hover{
+    background-color: #49494977;
+    border: 5px solid transparent;
+}
+/*========== Destaque ==========*/
+
+
+/*========== Sobre ==========*/
+.box_sobre{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.box_sobre h1{
+    color: var(--text-color);
+    font-family: var(--font-2);
+    margin-bottom: 20px;
+    font-size: 50px;
+}
+.box_sobre p{
+    color: var(--text-color);
+    font-size: 18.5px;
+    line-height: 22.5px;
+}
+.box_sobre .text{
+    width: 45rem;
+}
+.box_sobre img{
+    height: 35rem;
+}
+/*========== Sobre ==========*/
+
+
+/*========== Produtos ==========*/
+.produtos h3, .col-3 h1{
+    text-align: center;
+}
+.produtos{
+    padding: 5% 10%;
+    overflow: hidden;
+}
+.info i{
+    color: #f2a74b;
+    font-size: 20px;
+    margin-right: 10px;
+}
+.box .vinhos{
+    display: flex;
+    margin-top: 20px;
+    width: 200%;
+    transition: 1s;
+}
+#two:checked~.vinhos {
+    margin-left: -90%;
+}
+#three:checked~.vinhos {
+    margin-left: -165%;
+}
+.vinho{
+    display: flex;
+    padding: 20px;
+    box-shadow: 22px 22px 43px #121212;
+    margin-right: 4rem;
+    border-radius: 25px;
+    height: 26rem;
+    cursor: pointer;
+}
+
+.vinhos img{
+    height: 20rem;
+    transition: all 0.3s;
+}
+.info {
+    flex-direction: column;
+    justify-content: space-between;
+    width: 0;
+    opacity: 0;
+    display: flex;
+    height: 23.2rem;
+    overflow: hidden;
+    transition: width .3s ease-in-out; /* 5 segundos de transição */
+}
+.preco{
+    display: flex;
+}
+.comprar:hover ~ .info{
+    width: 25rem; 
+    margin-left: 20px;
+    opacity: 1; 
+    display: flex;
+    transition: width .5s ease-in-out, opacity 1.5s ease-in-out;
+}
+  
+.vinho img:hover ~ .info {
+    width: 25rem; 
+    opacity: 1; 
+    display: flex;
+    transition: width .5s ease-in-out, opacity 1.5s ease-in-out;
+}
+
+.produtos .button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+#tinto{
+    margin-top: 20px;
+}
+
+.produtos input{
+    display: none;
+}
+.button label {
+    height: 15px;
+    width: 15px;
+    border-radius: 20px;
+    background: var(--main-color);
+    margin: 0 4px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.button label.active {
+    width: 35px;
+}
+
+#one:checked ~ .button .one {
+    width: 35px;
+}
+
+#two:checked ~ .button .one {
+    width: 15px;
+}
+
+#two:checked ~ .button .two {
+    width: 35px;
+}
+#three:checked ~ .button .two {
+    width: 15px;
+}
+#three:checked ~ .button .one {
+    width: 15px;
+}
+#three:checked ~ .button .three {
+    width: 35px;
+}
+
+
+#branco{
+    margin-top: 100px;
+}
+.branco .vinhos{
+    display: flex;
+    width: 200%;
+    transition: 1s;
+}
+
+#two1:checked ~ .vinhos {
+    margin-left: -90.5%;
+}
+
+#one1:checked ~ .button .one1 {
+    width: 35px;
+}
+
+#two1:checked ~ .button .one1 {
+    width: 15px;
+}
+
+#two1:checked ~ .button .two1 {
+    width: 35px;
+}
+
+
+
+
+
+
+
+/*========== Contato ==========*/
+.contato{
+    height: 48rem;
+    display: flex;
+}
+.linha hr{
+    height: 2px;
+    border: none;
+    background: #49494977;
+    margin-top: 5%;
+}
+.contato hr{
+    margin: 0 10% 0 3%;
+    width: 3px;
+    border: none;
+    background: #49494977;
+}
+.contato .text{
+    text-align: center;
+    margin: auto 0;
+}
+.contato .text h1{
+    font-size: 70px;
+    color: var(--main-color);
+    font-weight: 800;
+    line-height: 65px;
+}
+.contato .text h4{
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-top: 20px;
+}
+.contato .text a{
+    color: var(--main-color);
+    font-weight: 600;
+    text-decoration: underline;
+    margin-left: 5px;
+}
+.box_contato{
+    width: 62rem;
+}
+.box_contato h1{
+    font-size: 50px;
+    color: var(--text-color);
+    font-weight: 700;
+}
+.box_contato h1 span{
+    color: var(--main-color);
+}
+.box_contato h2{
+    color: var(--text-color);
+}
+.contact-form{
+    display: grid;
+    margin-top: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1.5rem;
+    row-gap: 1.5rem;
+    max-width: 32rem;
+}
+.input-wrap{
+    position: relative;
+}
+.input-wrap.w-100{
+    grid-column: span 2;
+}
+.contact-input{
+    width: 100%;
+    background-color: #49494977;
+    border: none;
+    outline: none;
+    padding: 1.5rem 1.35rem 0.5rem 1.35rem;
+    border-radius: 20px;
+    color: var(--text-color);
+    font-size: 18px;
+    font-weight: 700;
+    border: 3px solid transparent;
+    transition: 0.3s;
+}
+.contact-input:hover{
+    background-color: #5a5a5a91;
+}
+.input-wrap label{
+    position: absolute;
+    top: 50%;
+    left: calc(1.35rem + 2px);
+    transform: translateY(-50%);
+    color: gray;
+    font-weight: 900;
+    font-size: 16px;
+    pointer-events: none;
+    transition: 0.3s;
+}
+.input-wrap .icon{
+    position: absolute;
+    right: calc(1.35rem + 2px);
+    top: 50%;
+    transform: translateY(-50%);
+    color: gray;
+    pointer-events: none;
+    font-size: 1.25rem;
+}
+textarea.contact-input{
+    resize: none;
+    width: 100%;
+    min-height: 100px;
+}
+textarea.contact-input ~ label{
+    top: 1.2rem;
+    transform: none;
+}
+textarea.contact-input ~ .icon{
+    top: 1.2rem;
+    transform: none;
+}
+.input-wrap.focus .contact-input{
+    background-color: #5a5a5a91;
+    border: 3px solid var(--main-color);
+}
+.input-wrap.focus label{
+    color: var(--main-color);
+    letter-spacing: 3px;
+}
+.input-wrap.focus .icon{
+    color: var(--main-color);
+}
+.input-wrap.not-empty label{
+    font-size: .66rem;
+    top: 0.75rem;
+    transform: translateY(0);
+}
+.box_contato .btn{
+    width: 100%;
+    grid-column: span 2;
+    padding: 0.75rem 2rem;
+    background-color: transparent;
+    color: var(--main-color);
+    font-size: 20px;
+    font-weight: 600;
+    border: 5px solid var(--main-color);
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.box_contato .btn:hover:hover{
+    background-color: var(--main-color);
+    color: var(--text-color);
+}
+/*========== Contato ==========*/
